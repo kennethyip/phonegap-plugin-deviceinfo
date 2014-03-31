@@ -10,8 +10,9 @@
 
 @interface CDVDeviceInfo : CDVPlugin
 
-- (void)getDeviceManufacturer:(CDVInvokedUrlCommand*)command;
-- (void)getDeviceModel:(CDVInvokedUrlCommand*)command;
-- (void)getDeviceId:(CDVInvokedUrlCommand*)command;
+- (void)getManufacturer:(CDVInvokedUrlCommand*)command;
+- (void)getModel:(CDVInvokedUrlCommand*)command;
+- (void)getId:(CDVInvokedUrlCommand*)command;
+- (void)getMacAddress:(CDVInvokedUrlCommand*)command;
 
 @end
