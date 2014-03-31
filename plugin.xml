@@ -22,10 +22,11 @@
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="phonegap-plugin-deviceinfo">
                 <param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
-                <param name="onload" value="true" />
             </feature>
-            <source-file src="src/android/CDVDeviceInfo.java" target-dir="src/com/phonegap/plugins/" />
         </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+        </config-file>
+        <source-file src="src/android/CDVDeviceInfo.java" target-dir="src/com/phonegap/plugins/" />
         
     </platform>
 </plugin>
