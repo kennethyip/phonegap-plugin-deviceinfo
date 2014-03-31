@@ -1,14 +1,14 @@
 var exec = require('cordova/exec');
 
 var deviceInfo = {
-	getDeviceManufacturer : function(success, error) {
-		exec(success, error, "phonegap-plugin-deviceinfo", "getDeviceManufacturer");
+	getManufacturer : function(success, error) {
+		exec(success, error, "phonegap-plugin-deviceinfo", "getManufacturer");
 	},
-	getDeviceModel : function(success, error) {
-		exec(success, error, "phonegap-plugin-deviceinfo", "getDeviceModel");
+	getModel : function(success, error) {
+		exec(success, error, "phonegap-plugin-deviceinfo", "getModel");
 	},
-	getDeviceId : function(success, error) {
-		exec(success, error, "phonegap-plugin-deviceinfo", "getDeviceId");
+	getId : function(success, error) {
+		exec(success, error, "phonegap-plugin-deviceinfo", "getId");
 	},
 	getMacAddress : function(success, error) {
 		exec(success, error, "phonegap-plugin-deviceinfo", "getMacAddress");
