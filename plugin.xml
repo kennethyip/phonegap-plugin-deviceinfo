@@ -10,7 +10,7 @@
     </js-module>
     <platform name="ios">
         <framework src="AdSupport.framework" />
-        <config-file target="config.xml" parent="/widget/plugins">
+        <config-file parent="/*" target="config.xml">
             <feature name="phonegap-plugin-deviceinfo">
                 <param name="ios-package" value="CDVDeviceInfo"/>
                 <param name="onload" value="true" />
@@ -20,7 +20,7 @@
         <source-file src="src/ios/CDVDeviceInfo.m" />
     </platform>
     <platform name="android">
-        <config-file target="config.xml" parent="/widget/plugins">
+        <config-file parent="/*" target="res/xml/config.xml">
             <feature name="phonegap-plugin-deviceinfo">
                 <param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
                 <param name="onload" value="true" />
