@@ -5,13 +5,11 @@ import org.apache.cordova.CallbackContext;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.provider.Settings.Secure;
-import android.telephony.TelephonyManager;
 
 /**
  * This class echoes a string called from JavaScript.
@@ -36,7 +34,7 @@ public class CDVDeviceInfo extends CordovaPlugin {
 		}
 		
 		if (action.equals("getMacAddress")) {
-			this.getModel(callbackContext);
+			this.getMacAddress(callbackContext);
 			return true;
 		}
 		return false;
