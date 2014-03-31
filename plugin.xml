@@ -6,14 +6,14 @@
     <license>Apache 2.0</license>
     <keywords>version</keywords>
     <js-module src="www/phonegap-plugin-deviceinfo.js" name="phonegap-plugin-deviceinfo">
-        <clobbers target="device" />
+        <clobbers target="deviceInfo" />
     </js-module>
     <platform name="ios">
         <framework src="AdSupport.framework" />
         <config-file parent="/*" target="config.xml">
             <feature name="phonegap-plugin-deviceinfo">
                 <param name="ios-package" value="CDVDeviceInfo"/>
-                <param name="onload" value="true" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
         <header-file src="src/ios/CDVDeviceInfo.h" />
