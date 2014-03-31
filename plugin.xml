@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.phonegap.plugins.deviceinfo" version="0.0.1">
+    <name>DeviceInfo</name>
+    <description>Get Application version plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>version</keywords>
+    <js-module src="www/phonegap-plugin-deviceinfo.js" name="phonegap-plugin-deviceinfo">
+        <clobbers target="device" />
+    </js-module>
+    <platform name="ios">
+        <framework src="AdSupport.framework" />
+        <config-file target="config.xml" parent="/widget/plugins">
+            <feature name="phonegap-plugin-deviceinfo">
+                <param name="ios-package" value="CDVDeviceInfo"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVDeviceInfo.h" />
+        <source-file src="src/ios/CDVDeviceInfo.m" />
+    </platform>
+    <platform name="android">
+        <config-file target="config.xml" parent="/widget/plugins">
+            <feature name="phonegap-plugin-deviceinfo">
+                <param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
+                <param name="onload" value="true" />
+            </feature>
+            <source-file src="src/android/CDVDeviceInfo.java"
+            target-dir="src/com/phonegap/plugins/" />
+        </config-file>
+        
+    </platform>
+</plugin>
