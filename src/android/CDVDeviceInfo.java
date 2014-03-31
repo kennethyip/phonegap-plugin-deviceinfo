@@ -20,8 +20,8 @@ public class CDVDeviceInfo extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-    	if (action.equals("getID")) {
-			this.getDeviceID(callbackContext);
+    	if (action.equals("getId")) {
+			this.getId(callbackContext);
 			return true;
 		}
 
