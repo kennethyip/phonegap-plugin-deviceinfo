@@ -5,13 +5,13 @@
     <description>Get Application version plugin</description>
     <license>Apache 2.0</license>
     <keywords>version</keywords>
-    <js-module src="www/phonegap-plugin-deviceinfo.js" name="phonegap-plugin-deviceinfo">
+    <js-module src="www/plugin-deviceinfo.js" name="plugin-deviceinfo">
         <clobbers target="deviceInfo" />
     </js-module>
     <platform name="ios">
         <framework src="AdSupport.framework" />
         <config-file parent="/*" target="config.xml">
-            <feature name="phonegap-plugin-deviceinfo">
+            <feature name="deviceinfo">
                 <param name="ios-package" value="CDVDeviceInfo"/>
             </feature>
         </config-file>
@@ -20,7 +20,7 @@
     </platform>
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="phonegap-plugin-deviceinfo">
+            <feature name="deviceinfo">
                 <param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
             </feature>
         </config-file>
