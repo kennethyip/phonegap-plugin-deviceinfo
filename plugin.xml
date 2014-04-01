@@ -5,7 +5,7 @@
     <description>Get Application version plugin</description>
     <license>Apache 2.0</license>
     <keywords>version</keywords>
-    <js-module src="www/plugin-deviceinfo.js" name="plugin-deviceinfo">
+    <js-module src="www/deviceinfo.js" name="deviceinfo">
         <clobbers target="deviceInfo" />
     </js-module>
     <platform name="ios">
