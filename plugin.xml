@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="com.phonegap.plugins.deviceinfo" version="0.0.2">
-    <name>DeviceInfo</name>
-    <description>Get Application version plugin</description>
-    <license>Apache 2.0</license>
-    <keywords>version</keywords>
-    <js-module src="www/deviceinfo.js" name="deviceinfo">
-        <clobbers target="deviceInfo" />
-    </js-module>
-    <platform name="ios">
-        <framework src="AdSupport.framework" />
-        <config-file parent="/*" target="config.xml">
-            <feature name="deviceinfo">
-                <param name="ios-package" value="CDVDeviceInfo"/>
-            </feature>
-        </config-file>
-        <header-file src="src/ios/CDVDeviceInfo.h" />
-        <source-file src="src/ios/CDVDeviceInfo.m" />
-    </platform>
-    <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="deviceinfo">
-                <param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
-            </feature>
-        </config-file>
-        <config-file parent="/*" target="AndroidManifest.xml">
-        </config-file>
-        <source-file src="src/android/CDVDeviceInfo.java" target-dir="src/com/phonegap/plugins/" />
-        
-    </platform>
+<plugin id="com.phonegap.plugins.deviceinfo" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>AppInfo</name>
+	<description>Get Application version plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>version</keywords>
+	<js-module src="www/deviceinfo.js" name="deviceinfo">
+		<clobbers target="deviceInfo" />
+	</js-module>
+	<platform name="ios">
+		<framework src="AdSupport.framework" />
+		<config-file parent="/*" target="config.xml">
+			<feature name="deviceinfo">
+				<param name="ios-package" value="CDVDeviceInfo"/>
+			</feature>
+		</config-file>
+		<header-file src="src/ios/CDVDeviceInfo.h" />
+		<source-file src="src/ios/CDVDeviceInfo.m" />
+	</platform>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="deviceinfo">
+				<param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/CDVDeviceInfo.java" target-dir="src/com/phonegap/plugins/" />
+
+	</platform>
 </plugin>
