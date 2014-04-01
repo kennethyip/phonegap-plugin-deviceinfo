@@ -13,6 +13,5 @@
 - (void)getManufacturer:(CDVInvokedUrlCommand*)command;
 - (void)getModel:(CDVInvokedUrlCommand*)command;
 - (void)getId:(CDVInvokedUrlCommand*)command;
-- (void)getMacAddress:(CDVInvokedUrlCommand*)command;
 
 @end

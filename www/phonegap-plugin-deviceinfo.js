@@ -10,9 +10,6 @@ var deviceInfo = {
 	getId : function(success, error) {
 		exec(success, error, "phonegap-plugin-deviceinfo", "getId");
 	},
-	getMacAddress : function(success, error) {
-		exec(success, error, "phonegap-plugin-deviceinfo", "getMacAddress");
-	}
 };
 
 module.exports = deviceInfo;

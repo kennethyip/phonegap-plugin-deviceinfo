@@ -32,11 +32,6 @@ public class CDVDeviceInfo extends CordovaPlugin {
 			this.getModel(callbackContext);
 			return true;
 		}
-		
-		if (action.equals("getMacAddress")) {
-			this.getMacAddress(callbackContext);
-			return true;
-		}
 		return false;
     }
     
@@ -64,21 +59,6 @@ public class CDVDeviceInfo extends CordovaPlugin {
 			callbackContext.error("Fail to get device model");
 		}else{
 			callbackContext.success(android.os.Build.MODEL);
-		}
-	}
-    
-    private void getMacAddress(CallbackContext callbackContext){
-        String macAddress = null;
-		Context context = cordova.getActivity().getApplicationContext();
-		WifiManager wm = (WifiManager) context
-        .getSystemService(Context.WIFI_SERVICE);
-		WifiInfo wifiInfo = wm.getConnectionInfo();
-		macAddress = wifiInfo.getMacAddress();
-        
-		if (macAddress != null) {
-			callbackContext.success(macAddress);
-		}else{
-			callbackContext.error("00:00:00:00:00:00");
 		}
 	}
 }

@@ -46,16 +46,6 @@
     }
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
-- (void)getMacAddress:(CDVInvokedUrlCommand*)command{
-    CDVPluginResult* pluginResult = nil;
-    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    if( adId != nil){
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:adId];
-    }else{
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
-    }
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-}
 
 
 @end
