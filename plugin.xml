@@ -10,7 +10,7 @@
 	<platform name="ios">
 		<framework src="AdSupport.framework" />
 		<config-file parent="/*" target="config.xml">
-			<feature name="deviceinfo">
+			<feature name="DeviceInfo">
 				<param name="ios-package" value="CDVDeviceInfo"/>
 			</feature>
 		</config-file>
@@ -19,7 +19,7 @@
 	</platform>
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="deviceinfo">
+			<feature name="DeviceInfo">
 				<param name="android-package" value="com.phonegap.plugins.CDVDeviceInfo" />
 			</feature>
 		</config-file>
